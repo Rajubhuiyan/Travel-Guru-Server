@@ -13,7 +13,7 @@ app.use(fileUpload());
 
 
 
-const port = 5000;
+const port = process.env.PORT || 5000;
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.uueml.mongodb.net/travelGuru?retryWrites=true&w=majority`;
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
